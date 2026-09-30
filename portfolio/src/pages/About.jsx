@@ -3,10 +3,10 @@ import computer from '../assets/computer.png'
 import {Phone, Mail, Users, FolderGit2, Copy, Check} from 'lucide-react';
 
 const contacts = [
-  { label: 'Phone', value: '+1 (123) 456-7890', icon: Phone, copy: true },
-  { label: 'E-mail', value: 'you@email.com', icon: Mail, copy: true },
-  { label: 'LinkedIn', value: '@yourname', icon: Users, href: 'https://www.linkedin.com/in/yourname' },
-  { label: 'GitHub', value: '@yourname', icon: FolderGit2, href: 'https://github.com/yourname' },
+  { label: 'Phone', value: '+1 (408) 512-4678', icon: Phone, copy: true },
+  { label: 'E-mail', value: 'tazmeenahhmed@gmail.com', icon: Mail, copy: true },
+  { label: 'LinkedIn', value: '@tazmeenahmed', icon: Users, href: 'https://www.linkedin.com/in/tazmeenahmed' },
+  { label: 'GitHub', value: '@tazmeenahhmed', icon: FolderGit2, href: 'https://github.com/tazmeenahhmed' },
 ];
 
 const ContactCard = ({ label, value, icon: Icon, copy, href }) => {
@@ -47,7 +47,7 @@ const About = () => {
     
     <div className='bg-white text-[#1B222C] text-sm rounded-md overflow-y-auto w-[90%] h-[95%]'>
       <div className='px-6 pt-6'>
-        <h3 className='font-bold text-xl text-nowrap text-[#A38AFF] pb-2 border-b-2 border-[#A38AFF]'>About Me</h3>
+        <h3 className='font-bold text-xl text-nowrap text-[#A38AFF] pb-2 border-b-2 border-[#A38AFF]'>ABOUT ME</h3>
       </div>
       <div className='flex items-center gap-6 p-6'>
         <img src={computer} alt="Computer illustration" className='w-1/3 shrink-0' />
@@ -64,7 +64,7 @@ const About = () => {
       </div>
 
       <div className='px-6 pb-6'>
-        <h3 className='font-bold text-xl text-nowrap text-[#A38AFF] pb-2 mb-4 border-b-2 border-[#A38AFF]'>Get in touch</h3>
+        <h3 className='font-bold text-xl text-nowrap text-[#A38AFF] pb-2 mb-4 border-b-2 border-[#A38AFF]'>CONTACT</h3>
 
         <div className='grid grid-cols-2 gap-3'>
           {contacts.map((contact) => (
