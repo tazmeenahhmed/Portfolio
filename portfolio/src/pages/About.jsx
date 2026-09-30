@@ -9,11 +9,12 @@ const contacts = [
   { label: 'GitHub', value: '@tazmeenahhmed', icon: FolderGit2, href: 'https://github.com/tazmeenahhmed' },
 ];
 
-const ContactCard = ({ label, value, icon: Icon, copy, href }) => {
+const ContactCard = ({ item }) => {
+  const Icon = item.icon;
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(value);
+    navigator.clipboard.writeText(item.value);
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   };
@@ -24,15 +25,15 @@ const ContactCard = ({ label, value, icon: Icon, copy, href }) => {
         <Icon size={24} strokeWidth={1.75} />
       </div>
       <div className='min-w-0'>
-        <p className='font-bold'>{label}</p>
+        <p className='font-bold'>{item.label}</p>
         <div className='flex items-center gap-2'>
-          {href ? (
-            <a href={href} target='_blank' rel='noreferrer' className='truncate hover:underline'>{value}</a>
+          {item.href ? (
+            <a href={item.href} target='_blank' rel='noreferrer' className='truncate hover:underline'>{item.value}</a>
           ) : (
-            <span className='truncate'>{value}</span>
+            <span className='truncate'>{item.value}</span>
           )}
-          {copy && (
-            <button onClick={handleCopy} aria-label={`Copy ${label}`} className='opacity-60 hover:opacity-100'>
+          {item.copy && (
+            <button onClick={handleCopy} aria-label={`Copy ${item.label}`} className='opacity-60 hover:opacity-100'>
               {copied ? <Check size={14} /> : <Copy size={14} />}
             </button>
           )}
@@ -68,7 +69,7 @@ const About = () => {
 
         <div className='grid grid-cols-2 gap-3'>
           {contacts.map((contact) => (
-            <ContactCard key={contact.label} {...contact} />
+            <ContactCard key={contact.label} item={contact} />
           ))}
         </div>
       </div>
