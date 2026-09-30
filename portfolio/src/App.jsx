@@ -11,9 +11,9 @@ function App() {
   const [isOpen, setIsOpen] = useState(true)
 
   return (
-    <div className='h-screen flex p-2 bg-[#D7CCFF]'>
+    <div className='h-screen flex p-2 gap-2 bg-[#D7CCFF]'>
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <main className='flex-1'>
+      <main className='flex-1 flex items-center justify-center'>
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/projects" element={<Projects />} />
