@@ -23,16 +23,15 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                 </button>
             </div>
 
-            <div className={`w-32 h-32 mx-auto rounded-sm overflow-hidden transition-all duration-200 ${isOpen ? 'w-32 opacity-100' : 'w-0 opacity-0'}`}>
-                    <img src={profile} className="w-full h-full object-cover"></img>
+            <div className={`mx-auto rounded-sm overflow-hidden transition-all duration-300 ${isOpen ? 'w-32 h-32 opacity-100' : 'w-0 h-0 opacity-0'}`}>
+                    <img src={profile} alt="Tazmeen Ahmed" className="w-full h-full object-cover" />
             </div>
 
-            <div className={`mt-2 text-center overflow-hidden transition-all duration-200 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`text-center overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-10 mt-2 opacity-100' : 'max-h-0 mt-0 opacity-0'}`}>
                 <h3 className='font-bold text-lg text-nowrap'>Tazmeen Ahmed</h3>
             </div>
 
-
-            <nav className="mt-6">
+            <nav className={`transition-all duration-300 ${isOpen ? 'mt-6' : 'mt-0'}`}>
                 {navItems.map((item) => (
                     <NavLink
                         key={item.title}
