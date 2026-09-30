@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import Sidebar from './components/Sidebar.jsx';
 import './App.css'
 
 function App() {
+
+  const [isOpen, setIsOpen] = useState(true)
+
   return (
-    <div className='h-screen bg-[#DDD6FF]'></div>
+    <div className='h-screen flex p-2 bg-[#D7CCFF]'>
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+    </div>
   )
 }
 
