@@ -13,10 +13,10 @@ const Experience = () => {
         <h3 className='font-bold text-xl text-nowrap text-[#A38AFF] pb-2 border-b-2 border-[#A38AFF]'>EXPERIENCE</h3>
       </div>
 
-      <div className='flex flex-col justify-center items-center p-6 gap-6'>
+      <div className='flex flex-col p-6 gap-6'>
         {experiences.map((item) => (
 
-          <div key={item.title} className='text-white bg-[#D7CCFF] rounded-lg w-[90%] h-70'> 
+          <div key={item.title} className='text-white bg-[#D7CCFF] rounded-lg h-70'> 
             <div className='flex p-6 gap-4'>
               <img src={codeday} className='w-15 h-15 shrink-0 rounded-md'/>
               <div>
